@@ -2,7 +2,8 @@
 header('Access-Control-Allow-Origin: *');
 $username = $_GET['fname'];
 $password = $_GET['fpass'];
-$con=mysqli_connect("localhost","jrinc","","c9");
+// $con=mysqli_connect("localhost","jrinc","","c9");
+$con=mysqli_connect(getenv('MYSQL_SERVICE_HOST'),getenv('MYSQL_USER'),getenv('MYSQL_PASSWORD'),getenv('MYSQL_DATABASE'));
 // Check connection
 if (mysqli_connect_errno())
   {
