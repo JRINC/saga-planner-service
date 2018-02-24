@@ -3,7 +3,7 @@ header('Access-Control-Allow-Origin: *');
 $username = $_GET['fname'];
 $password = $_GET['fpass'];
 // $con=mysqli_connect("localhost","jrinc","","c9");
-$con=mysqli_connect(getenv('OPENSHIFT_MYSQL_DB_HOST'), getenv('OPENSHIFT_MYSQL_DB_USERNAME'), getenv('OPENSHIFT_MYSQL_DB_PASSWORD'),"sagaplannerdb");
+$con=mysqli_connect(getenv('MYSQL_SERVICE_HOST'),"jrinc","2ObCB28HYUFGrfRF","sagaplannerdb");
 // Check connection
 if (mysqli_connect_errno())
   {
